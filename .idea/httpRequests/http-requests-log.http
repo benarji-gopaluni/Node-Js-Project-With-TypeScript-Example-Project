@@ -1,0 +1,105 @@
+POST http://localhost:3000/blogs/addBlog
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/Users/ben/temp/nts_blogger/input.json
+
+###
+
+POST http://localhost:3000/blogs/addBlog
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/Users/ben/temp/nts_blogger/input.json
+
+<> 2020-03-11T030305.500.html
+
+###
+
+POST http://localhost:3000/blogs/addBlog
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/Users/ben/temp/nts_blogger/input.json
+
+<> 2020-03-11T030236.200.json
+
+###
+
+POST http://localhost:3000/blogs/addBlog
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/Users/ben/temp/nts_blogger/input.json
+
+<> 2020-03-11T030107.500.html
+
+###
+
+POST http://localhost:3000/blogs/addBlog
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/Users/ben/temp/nts_blogger/input.json
+
+###
+
+POST http://localhost:3000/blogs/addBlog
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/Users/ben/temp/nts_blogger/input.json
+
+###
+
+POST http://localhost:3000/blogs/addBlog
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/Users/ben/temp/nts_blogger/input.json
+
+###
+
+POST http://localhost:3000/blogs/addBlog
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/Users/ben/temp/nts_blogger/input.json
+
+###
+
+POST http://localhost:3000/blogs/addBlog
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{_id:1,title:"abc"}
+
+###
+
+POST http://localhost:3000/blogs/addBlog
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{_id:1,title:"abc"}
+
+###
+
+POST http://localhost:3000/blogs/addBlog
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{_id:1,title:"abc"}
+
+###
+
