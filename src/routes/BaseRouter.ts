@@ -1,4 +1,6 @@
 import {Router, Request, Response, NextFunction} from 'express';
+import BlogRepository from "../repository/BlogRepository";
+import BlogRouter from "./BlogRouter";
 
 export class BaseRouter {
     private _router: Router;
@@ -10,7 +12,7 @@ export class BaseRouter {
     }
 
 
-    get router(): Router{
+    get router(): Router {
         return this._router;
     }
 
@@ -19,7 +21,13 @@ export class BaseRouter {
     }
 
     private greetMessage = (req: Request, res: Response, next: NextFunction) => {
-        res.json({"message": "Welcome To All", "timestamp": new Date()});
+        let data = BlogRouter.getApiInfo();
+        res.json({
+            "message": "Welcome To All",
+            "timestamp": new Date(),
+            "Msg": "This is a localstorage based node js project to init with basic data call /blogs/init",
+            "apis": data
+        });
     }
 }
 
