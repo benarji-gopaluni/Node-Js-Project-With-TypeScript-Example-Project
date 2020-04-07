@@ -1,10 +1,12 @@
 import {Router, Request, Response, NextFunction} from 'express';
-import BlogRepository from "../repository/BlogRepository";
-import BlogRouter from "./BlogRouter";
+import Utils from "../utils/Utils";
+
+let jwt = require('jsonwebtoken');
 
 export class BaseRouter {
     private _router: Router;
     private path: string = '/';
+
 
     constructor() {
         this._router = Router();
@@ -18,16 +20,23 @@ export class BaseRouter {
 
     private initRoutes(): void {
         this._router.get(`${this.path}`, this.greetMessage);
+        this._router.post(`/login`, this.login);
     }
 
     private greetMessage = (req: Request, res: Response, next: NextFunction) => {
-        let data = BlogRouter.getApiInfo();
-        res.json({
-            "message": "Welcome To All",
-            "timestamp": new Date(),
-            "Msg": "This is a localstorage based node js project to init with basic data call /blogs/init",
-            "apis": data
-        });
+        res.json({"message": "Welcome To All", "timestamp": new Date()});
+    }
+    private login = (req: Request, res: Response, next: NextFunction) => {
+        if (req.body.username == 'test' && req.body.password == 'password') {
+            let token = jwt.sign({'username': req.body.username}, Utils.secret_key,
+                {
+                    'expiresIn': '24h'//h-hours,m-min,s-secs
+                }
+            );
+            res.json({'success': true, 'message': 'Authentication Successfull', 'token': token});
+        } else {
+            res.json({'success': false, 'message': 'Authentication Failed', 'token': null});
+        }
     }
 }
 
